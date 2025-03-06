@@ -1,14 +1,7 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
-
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
+    // Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
 
     char codDaCidade1[3];
@@ -22,6 +15,8 @@ int main() {
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+
+    printf("\n");
 
     printf("Digite o codigo da sua cidade1\n");
     scanf("%s", codDaCidade1);
@@ -104,23 +99,51 @@ int main() {
 
     //comparação cartas
 
-    unsigned int populacaoComp = populacao1 > populacao2;
-    unsigned int areaComp = (unsigned int)area1 > (unsigned int)area2;
-    unsigned int pibComp = (unsigned int)pib1 > (unsigned int)pib2;
-    unsigned int pontoTuristicosComp = numDePontosTuristicos1 > numDePontosTuristicos2;
-    unsigned int pibPerCaptaComp = (unsigned int)pibPerCapta1 > (unsigned int)pibPerCapta2;
-    unsigned int superPoderComp = (unsigned int)superPoder1 > (unsigned int)superPoder2;
-    unsigned int densidadeComp  = (unsigned int)densidade1 < (unsigned int)densidade2;
+    printf("cartas vencedoras:\n");
 
-    printf("Comparação cartas:");
+    // int populacaoComp,areaComp,pibComp,pontoTuristicosComp,pibPerCaptaComp,superPoderComp,densidadeComp;
 
-    printf("Populacao: %d \n", populacaoComp );
-    printf("Area: %.2f \n", areaComp);
-    printf("PIB: %.2f \n", pibComp);
-    printf("Pontos Turisticos: %d \n", pontoTuristicosComp);
-    printf("PIB per capta: %.2f \n", pibPerCaptaComp);
-    printf("Poder de carta:  %.2f", superPoderComp);
-    printf("Densidade populacional: %.2f \n", densidadeComp);
+    if(populacao1 > populacao2){
+        printf("Populacao: carta1\n");
+    }else{
+        printf("Populacao: carta2\n");
+    }
+
+    if((unsigned int)area1 > (unsigned int)area2){
+        printf("Area: carta1\n");
+    }else{
+        printf("Area: carta2\n");
+    }
+
+    if((unsigned int)pib1 > (unsigned int)pib2){
+        printf("PIB: carta1\n");
+    }else{
+        printf("PIB: carta2\n");
+    }
+
+    if(numDePontosTuristicos1 > numDePontosTuristicos2){
+        printf("Pontos Turisticos: carta1\n");
+    }else{
+        printf("Pontos Turisticos: carta2\n");
+    }
+
+    if((unsigned int)pibPerCapta1 > (unsigned int)pibPerCapta2){
+        printf("PIB per capta: carta1\n");
+    }else{
+        printf("PIB per capta: carta2\n");
+    }
+
+    if((unsigned int)superPoder1 > (unsigned int)superPoder2){
+        printf("Poder de carta: carta1\n");
+    }else{
+        printf("Poder de carta: carta2\n");
+    }
+
+    if((unsigned int)densidade1 < (unsigned int)densidade2){
+        printf("Densidade populacional: carta1\n");
+    }else{
+        printf("Densidade populacional: carta2\n");
+    }
 
     
     return 0;
